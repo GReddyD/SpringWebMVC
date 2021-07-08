@@ -25,7 +25,7 @@ public class PostController {
 						: new ResponseEntity<>(HttpStatus.NOT_FOUND);
 	}
 
-	@GetMapping("{/id")
+	@GetMapping("/{id}")
 	public ResponseEntity<Post> getById(@PathVariable long id) {
 		Post currentPost = service.getById(id);
 		return currentPost != null
@@ -41,7 +41,7 @@ public class PostController {
 		return new ResponseEntity<>(post, HttpStatus.OK);
 	}
 
-	@DeleteMapping("/{id")
+	@DeleteMapping("/{id}")
 	public void removeById(long id) {
 		service.removeById(id);
 	}

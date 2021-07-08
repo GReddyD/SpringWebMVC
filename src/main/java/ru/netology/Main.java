@@ -19,7 +19,7 @@ public class Main {
 		tomcat.setConnector(connector);
 
 		tomcat.getHost().setAppBase(".");
-		tomcat.addWebapp("",".");
+		tomcat.addWebapp("", ".");
 		tomcat.start();
 		tomcat.getServer().await();
 	}
